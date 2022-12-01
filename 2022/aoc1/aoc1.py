@@ -1,4 +1,4 @@
-"""Advent of Code 1"""
+"""Advent of Code 1 solution"""
 
 with open("input", "r", encoding="utf-8") as input_file:
 
