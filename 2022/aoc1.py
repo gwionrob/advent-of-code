@@ -1,6 +1,6 @@
 """Advent of Code 1 solution"""
 
-with open("input", "r", encoding="utf-8") as input_file:
+with open("data/day1.txt", "r", encoding="utf-8") as input_file:
 
     calories: str = input_file.read()
 

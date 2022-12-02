@@ -1,6 +1,6 @@
 """Advent of Code 2 solution"""
 
-with open("input", "r", encoding="utf-8") as input_file:
+with open("data/day2.txt", "r", encoding="utf-8") as input_file:
 
     strategy: str = input_file.read()
 
