@@ -20,9 +20,14 @@ rucksacks_split = list(map(splitter, rucksacks_arr))
 
 
 def duplicate_finder(l: list[str]):
-    list_of_dupe = list(
-        set(priority[i] for i in l[0] + l[1] if l[0].count(i) > 0 and l[1].count(i) > 0)
-    )
+    def condition(compartments: list, letter: str) -> bool:
+        result = True
+        for compartment in compartments:
+            if compartment.count(letter) == 0:
+                result = False
+        return result
+
+    list_of_dupe = list(set(priority[i] for i in "".join(l) if condition(l, i)))
     return list_of_dupe[0]
 
 
@@ -35,18 +40,6 @@ elf_groups = []
 for i in range(0, len(rucksacks_arr), 3):
     elf_groups.append([rucksacks_arr[i], rucksacks_arr[i + 1], rucksacks_arr[i + 2]])
 
-
-def duplicate_finder_group(l: list[str]):
-    list_of_dupe = list(
-        set(
-            priority[i]
-            for i in l[0] + l[1] + l[2]
-            if l[0].count(i) > 0 and l[1].count(i) > 0 and l[2].count(i) > 0
-        )
-    )
-    return list_of_dupe[0]
-
-
-group_dupes = list(map(duplicate_finder_group, elf_groups))
+group_dupes = list(map(duplicate_finder, elf_groups))
 
 print(sum(group_dupes))  # solution to part 2
