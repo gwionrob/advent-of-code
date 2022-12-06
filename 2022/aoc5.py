@@ -1,4 +1,4 @@
-"""Advent of Code 4 solution"""
+"""Advent of Code 5 solution"""
 
 with open("data/day5.txt", "r", encoding="utf-8") as input_file:
     lines = input_file.read().splitlines()
