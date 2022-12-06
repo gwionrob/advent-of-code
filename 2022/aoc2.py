@@ -1,10 +1,7 @@
 """Advent of Code 2 solution"""
 
 with open("data/day2.txt", "r", encoding="utf-8") as input_file:
-
-    strategy: str = input_file.read()
-
-strategy_arr = strategy.splitlines()
+    strategy_arr = input_file.read().splitlines()
 
 
 def result(game: str) -> int:
