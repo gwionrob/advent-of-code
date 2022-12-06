@@ -14,4 +14,4 @@ with open("data/day6.txt", "r", encoding="utf-8") as input_file:
     )
 
 print(SIGNAL.index(packet_marker) + 4)  # solution to part 1
-print(SIGNAL.index(message_marker) + 14)  # solution to part 1
+print(SIGNAL.index(message_marker) + 14)  # solution to part 2
